@@ -11,18 +11,23 @@
 </head>
 
 <body>
-    <header>
-        <div class="top-header">
+    <header class="main-header">
+        <div class="main-header-top-bar">
             <div class="logo">
                 <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
             </div>
-            <div class="form" action="#" method="GET">
+           <!--- <div class="form" action="#" method="GET">
                 <div class="input">Buscar productos, marcas y más</div>
                 <div class="submit"><i class="fa fa-search"></i></div>
-            </div>
-            <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+            </div> -->
+            <h2 class="copy-header">
+                <i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito
+            </h2>
         </div>
-        <nav>
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div> 
+        <nav class="navbar">
             <ul>
                 <li><a href="#">Ofertas</a></li>
                 <li><a href="#">Tiendas Oficiales</a></li>
@@ -35,9 +40,6 @@
                 <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
-        <div class="burger-menu">
-            <i class="fa fa-bars burger"></i>
-        </div>
     </header>
     <section class="banner">
         <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
@@ -131,18 +133,21 @@
     <footer id="footer">
         <div class="contenedor footer-content">
             <ul>
+                <i class="icono-footer fa-solid fa-credit-card"></i>
                 <li>Paga con tarjeta o en efectivo</li>
                 <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
                     puntos de pago. ¡Y siempre es seguro!</p>
             </ul>
 
             <ul>
+                <i class="icono-footer fa-solid fa-box"></i>
                 <li> Envío gratis desde $ 2.500</li>
                 <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
                     productos. Es un beneficio de Mercado Puntos.</p>
             </ul>
 
             <ul>
+                <i class="icono-footer fa-solid fa-user-shield"></i>
                 <li> Seguridad, de principio a fin</li>
                 <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
                     porque estás siempre protegid@.</p>
@@ -153,5 +158,5 @@
     </footer>
 
 </body>
-
+<script src="https://kit.fontawesome.com/b89c2ee4f3.js" crossorigin="anonymous"></script>
 </html>
