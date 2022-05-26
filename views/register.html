@@ -72,10 +72,52 @@
             <!-- FORMULARIO -->
             <form action="/" method="POST">
 
+                <!-- NOMBRE Y APELLIDO -->
+                <div class="normal-input parts-form">
+                    <label for="name" class="label-inside"> Nombre y apellido </label>
+                    <input type="text" name="name" id="name">
+                    <span class="feedback"></span>
+                </div>
+                
                 <!-- NOMBRE DE USUARIO -->
                 <div class="normal-input parts-form">
                     <label for="username" class="label-inside"> Nombre de usuario </label>
                     <input type="text" name="username" id="username">
+                </div>
+
+                <!-- FECHA DE NACIMIENTO -->
+                <div class="normal-input parts-form special-input">
+                    <label for="birthdate" class="title-special-input"> Fecha de nacimiento </label>
+                    <input type="date" name="birthdate" id="birthdate">
+                </div>
+
+                <!-- DOMICILIO -->
+                <div class="normal-input parts-form">
+                    <label for="address" class="label-inside"> Domicilio </label>
+                    <input type="text" name="address" id="address">
+                </div>
+
+                <!-- PERFIL DEL USUARIO -->
+                <div class="parts-form special-input">
+                    <p class="title-special-input"> Perfil del Usuario </p>
+                    <label><input type="radio" name="user-profile" value="comprar">Comprador</label>
+                    <label><input type="radio" name="user-profile" value="vender">Vendedor</label>
+                </div>
+
+                <!-- CATEGORÍAS DE INTERÉS -->
+                <div class="parts-form special-input">
+                    <p class="title-special-input"> Intereses </p>
+                    <label class="option-checkbox"><input type="checkbox" name="interests" value="electro">Electro</label>
+                    <label class="option-checkbox"><input type="checkbox" name="interests" value="moda">Moda</label>
+                    <label class="option-checkbox"><input type="checkbox" name="interests" value="hogar">Hogar</label>
+                    <label class="option-checkbox"><input type="checkbox" name="interests" value="jugueteria">Juguetería</label>
+                    <label class="option-checkbox"><input type="checkbox" name="interests" value="vida">Vida sana</label>
+                </div>
+
+                <!-- FOTO DE USUARIO -->
+                <div class="parts-form special-input">
+                    <label for="user-photo" class="title-special-input"> Foto de usuario </label>
+                    <input type="file" name="user-photo" id="user-photo">
                 </div>
 
                 <!-- CONTRASEÑA -->
@@ -84,9 +126,18 @@
                     <input type="password" name="password" id="password">
                 </div>
 
+                <!-- CONFIRMAR CONTRASEÑA -->
+                <div class="normal-input parts-form">
+                    <label for="confirm-password" class="label-inside"> Confirmar contraseña </label>
+                    <input type="password" name="confirm-password" id="confirm-password">
+                </div>
+
                 <!-- BOTÓN DE ENVIAR -->
                 <button type="submit" value="submit"> Enviar </button>
                 <!-- <button type="submit" value="submit" onclick="window.location.href='/'"> Enviar </button> -->
+
+                <!-- BOTÓN DE RESET -->
+                <button type="reset" value="reset"> Borrar </button>
 
             </form>
 
@@ -145,4 +196,5 @@
         </footer>
 
     </body>
+
 </html>

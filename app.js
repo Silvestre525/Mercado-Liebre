@@ -1,29 +1,34 @@
-const express = require('express');
+/* Importo el módulo express */
+const express = require ('express');
+
+/* Guardo en la variable app la ejecución de la función express */
 const app = express();
-const path = require("path");
-app.use(express.static('public'));
 
-app.use(express.urlencoded({ extended: false }));
+/* Importo el módulo nativo path en la variable path */
+const path = require ('path');
 
+/* A través de la propiedad static de express establezco los archivos estáticos */
+app.use (express.static('public'));
 
-app.listen(3000, ()=>{
-    console.log('Servidor funcionando');
-});
+/* Levanto mi servidor */
+app.listen(8000, () => console.log('Servidor funcionando en http://localhost:8000'))
 
-app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/views/home.html');
-});
-
-app.get('/registro', (req,res)=>{
-    res.sendFile(path.join(__dirname, '/views/registro.html'));
-});
-
-app.get("/login", (req,res) => {
-    res.sendFile(path.join(__dirname, "/views/login.html"));
+/* Indico cuando me mostrará el home de mi página */
+app.get ('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/home.html'))
 })
 
-////////
-app.post('/datos',(res,req)=>{
-    res.send(req.body);
+/* Indico cuando se mostrará el register de mi página */
+app.get ('/register', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/register.html'))
+})
 
+/* Indico cuando se mostrará el login de mi página */
+app.get ('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/login.html'))
+})
+
+/* Redirecciono al home al completar el formulario del register y del login */
+app.post ('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/home.html'))
 })

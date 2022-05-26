@@ -1,210 +1,473 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
     background-color: #ebebeb;
 }
 
-h3{
-    font-size: 24px;
+/* ------------------   HEADER    ------------------*/
+.main-header {
+    background-color: #EAC926;;
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.copy-header{
-    font-size: 20px;
-}
-div.main-header-top-bar{
-    padding: 5%;
-}
-
-header{
-    background-color: #EAC926;
+/* LOGO DEL HEADER */
+.logo {
+    width: 50%;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
 }
 
-header div.logo{
-    width:150px;
-    padding: 5px;
-    
-}
-.navbar{
-    
-}
-.navbar ul{
-    list-style-type: none;
-    font-size: 12px;
-}
-
-.navbar a{
-    text-decoration: none;
-    color: #000;
-    display: inline-block;
-    padding: 5px 0;
-    font-size: 17px;
-}
-
-header .form .input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
-}
-header .form .submit{
-    background-color: #FFF;
-    border: 1px solid #000;
-    color: #666;
-    width: 10%;
-}
-
-header div.top-header p{
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-}
-
-div.burger-menu i{
-    background-color: #0044AA;
-    color: #FFF;
+.logo img {
     display: block;
-    max-width: 50px;
-    padding: 15px 0;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 18px;
-    margin: auto;   
-}
-
-.price{
-    font-size: 18px;
-}
-
-.discount,
-.description{
-    font-size: 16px;
-    font-weight: normal;
-}
-
-h3,
-.description{
-    color: #666;
-}
-
-.description{
-    display: none;
-    margin-top: 20px;
-}
-
-section.banner img{
+    margin: auto;
     width: 100%;
+    max-width: 17.25rem;
 }
 
-main{
+/* DIV DE LA BARRA DE BÚSQUEDA */
+.search-bar {
+    width: 50%;
+    max-height: 2.5rem;
+    max-width: 13.75rem;
+    position: relative;
+}
+
+/* INPUT DE LA BARRA DE BÚSQUEDA */
+.search-bar input{
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.625rem 0.25rem 0.625rem 0.625rem;
+}
+
+/* DIV QUE CONTIENE EL LABEL Y EL ÍCONO DE LA BARRA DE BÚSQUEDA */
+.inside-search-bar {
+    position: absolute;
     width: 90%;
-    margin: 0 auto;
+    top: 25%;
+    left: 0.5rem;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
-main section article{
-    background-color: #fff;    
-    margin: 10px 0px;
+/* LABEL DE LA BARRA DE BÚSQUEDA */
+.inside-search-bar label {
+    font-size: 0.9375rem;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    padding: 0;
+    margin: 0;
 }
 
-main section article img{
+/* ÍCONO DE BÚSQUEDA */
+.inside-search-bar a i {
+    font-size: 0.9375rem;
+    color: #666;
+    padding-left: 5px;
+    margin: auto;
+}
+
+/* MENSAJE DE COMPRA EN CUOTAS DEL HEADER */
+.copy-header {
+    font-size: 0.75rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* LISTAS DE LA BARRA DE NAVEGACIÓN */
+.main-navbar ul {
+    list-style: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    display: none;
+}
+
+/* ENLACES DE LOS ITEMS DE LAS 2 LISTAS DE LA BARRA DE NAVEGACIÓN */
+.main-navbar li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.75rem;
+}
+
+/* BURGER MENÚ DEL HEADER EN EL MODELO MOBILE */
+.burger-menu {
+    background-color: #1259c3;
+    color: #ffffff;
+    display: block;
+    font-size: 1.25rem;
+    max-width: 2em;
+    padding: 0.4em 0;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    margin-top: 1.5rem;
     width: 100%;
 }
 
-main section article i,
-.discount{
-    color: #39b54a;
+/* BANNER PRINCIPAL */
+.banner-principal {
+    width: 100vw;
 }
 
-main section article i{
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
+/* ------------------   SECCIÓN MAIN    ------------------*/
+main {
+    width: 90vw;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+/* SECCIONES DEL MAIN */
+.main-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* TÍTULOS DE CADA SECCIÓN DEL MAIN */
+.main-sections header {
+    margin-bottom: 0.875rem;
+    width: 100%;
+}
+
+.main-sections header h3 {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 0.5rem 0 0 0.75rem;
+    margin: 0;
+}
+
+/* ARTÍCULOS DE CADA SECCIÓN DEL MAIN */
+.product {
+    background-color: #ffffff;
+    margin-bottom: 0.625rem;
+    width: 95%;
+}
+
+/* IMAGEN DE CADA PRODUCTO */
+.product img {
+    width: 100%;
+}
+
+/* INFO DE CADA PRODUCTO DEL MAIN */
+.info-product {
+    border-top: 1px solid  #ebebeb;
+    padding: 0 0 1.25rem 1.125rem;
+    position: relative;
+}
+
+/* ÍCONO DE CADA PRODUCTO DEL MAIN */
+.info-product i {
+    display: block;
+    font-size: 1rem;
+    padding: 0.3125em;
+    width: 1.875rem;
+    height: 1.875rem;
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
+    position: absolute;
+    right: 8%;
+    top: -1rem;
+    color:#39b54a;
+    transition: transform 750ms;
 }
 
-main section h3{
-    margin: 20px 0px;
+/* CUANDO SE PASA EL MOUSE POR ENCIMA DEL ÍCONO DE CADA PRODUCTO DEL MAIN */
+.info-product i:hover {
+    transform: rotateZ(-90deg);
 }
 
-article div.main-article{
+/* DIV QUE CONTIENE AL PRECIO Y AL DESCUENTO */
+.product-value {
     width: 100%;
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
 }
 
-@media (min-width: 361px){
-    main section article .description{
-        display: block;
-    }
-
-    main section article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
+/* EL PRECIO Y EL DESCUENTO DE CADA PRODUCTO DEL MAIN */
+.product-price, .product-discount {
+    margin: 0;
 }
 
-@media (min-width: 768px){
-    .main-header-top-bar{
-        display: flex;
-        justify-content: space-between;
-    }
-    .copy-header{
-        max-width: 350px;
-        text-align: right;
-    }
-    .burger-menu{
-        display: none;
-    }
-    .navbar{
-        display: flex;
-        justify-content: space-between;
-    }
-    .navbar ul{
-        display: flex;
-    }
-    .navbar li{
-        margin: 0 3px;
-    }
-   
+/* EL PRECIO DE CADA PRODUCTO DEL MAIN */
+.product-price {
+    font-size: 1.125rem;
+    width: 30%;
 }
 
-@media (min-width: 1200px){
-    .main-header-top-bar {
-        max-width: 1200px;
-        margin: auto;
-        align-items: center;
-    }
-    .navbar li{
-        max-width: 1200px;
-        margin: auto;
-        margin: 0 10px;
-    }
-    .navbar a{
-        font-size: 19px;
-    }
-    .copy-header{
-        max-width: none;
-        font-size: 22px;
-        font-weight: 400;
-        margin: 0;
-    }
-    .logo{
-        width:250px;
-    }
+/* EL DESCUENTO DE CADA PRODUCTO DEL MAIN */
+.product-discount {
+    font-size: 1rem;
+    color:#39b54a;
+    width: 70%;
 }
 
-#footer{
+/* LA DESCRIPCIÓN DE CADA PRODUCTO DEL MAIN */
+.product-description {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 1rem;
+    display: none;
+    color: #666;
+}
+
+/* CUANDO EL MOUSE PASE POR ENCIMA DEL PRODUCTO, DESPLEGARÁ LA DESCRIPCIÓN DE ÉSTE */
+.product:hover .product-description {
+    display: block;
+}
+
+/* ------------------   FOOTER    ------------------*/
+
+.main-footer {
+    background-color: #ffffff;
+    border: 4px solid  #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* TODOS LOS ARTICLE DEL FOOTER */
+.main-footer article{
+    width: 100%;
+    margin: 2.75rem auto;
+}
+
+/* LOS DIVS DENTRO DE LOS ARTICLE DEL FOOTER */
+.inside-div-footer {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    max-width: 15.625rem;
+}
+
+/* TODOS LOS ÍCONOS DE LOS ARTICLES DEL FOOTER */
+.inside-div-footer i{
+    font-size: 1.625rem;
+    color:#1259c3;
+    margin-bottom: 0.625rem;   
+    transition: color 450ms;
+}
+
+/* CUANDO SE PASA EL MOUSE POR ENCIMA DE LOS ÍCONOS DE LOS ARTICLES DEL FOOTER */
+.inside-div-footer i:hover {
+    color:#03264C;
+}
+
+/* TODOS LOS H4 DE LOS ARTICLES DEL FOOTER */
+.inside-div-footer h4 {
+    font-size: 1rem;
+    color: #666;
+    margin: 0; 
+}
+
+/* TODOS LOS PÁRRAFOS DE LOS ARTICLES DEL FOOTER */
+.inside-div-footer p {
+    font-size: 0.75rem;
+    color: #666;
+    margin: 0;   
+}
+
+/* EL ARTICLE DEL COPYRIGHT EN EL FOOTER */
+.main-footer .copyright {
+    width: 100%;
+    margin: 0 0 1rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* ------------------   REGISTER & LOGIN   ------------------*/
+.main-register-login {
+    margin-top: 1rem;
+}
+
+/* TODOS LOS DIVS DEL FORMULARIO */
+.parts-form {
+    max-width: 43.125rem;
+    margin: auto;
+    margin-bottom: 2.5rem;
+}
+
+/* LOS DIVS QUE CONTIENEN UN INPUT CON UN RECTÁNGULO NORMAL */
+.normal-input {
+    position: relative;
+}
+
+/* LOS LABEL DE LOS INPUTS RECTANGULARES */
+.label-inside {
+    position: absolute;
+    top: 25%;
+    left: 1rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* LOS INPUT DE LOS DIV CON CLASE NORMAL-INPUT */
+.normal-input input {
+    width: 100%;
+    padding: 0.625rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #666;
+}
+
+/* LOS DIVS QUE CONTIENEN UN INPUT QUE NO ES RECTANGULAR Y EL DIV DE LA FECHA */
+.special-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* LOS LABEL DE LOS INPUT CON CLASE SPECIAL-INPUT */
+.title-special-input {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* LOS INPUTS DE TIPO RADIO DEL FORMULARIO */
+.special-input label input[type="radio"]{
+    margin-right: 1rem;
+}
+
+/* LOS LABELS DE LOS INPUTS DE TIPO CHECKBOX DEL FORMULARIO */
+.option-checkbox{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* LOS INPUTS DE TIPO CHECKBOX */
+.option-checkbox input {
+    margin: 0 1rem
+}
+
+/* LOS BOTONES DE ENVIAR Y BORRAR */
+button {
+    display: block;
+    width: 100%;
+    max-width: 43.125rem;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color:#1259c3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    transition: background-color 450ms;
+}
+
+/* CUANDO EL MOUSE ESTÁ ENCIMA DEL BOTÓN DE ENVIAR */
+button:hover {
+    background-color: #0022AA;
+}
+
+/* FEEDBACK DEL FORMULARIO */
+.feedback {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    background-color: rgb(251, 138, 138);
+    color: red;
+    font-size: 1rem;
+    /* padding: 1rem 0; */
     text-align: center;
 }
 
-.icono-footer{
-    font-size: 2em;
-    color: blue;
-    margin: 10px;
+/* ------------------   MEDIA QUERIES    ------------------*/
+
+/* PARA NAVEGACIÓN EN TABLETS */
+@media (min-width: 361px) {
+
+    /* --------  HEADER  -------- */
+
+    /* LOGO DEL HEADER */
+    .logo {
+        width: 33%;
+    }
+
+    /* DIV DE LA BARRA DE BÚSQUEDA */
+    .search-bar {
+        width: 33%;
+    }
+
+    /* MENSAJE DE COMPRA EN CUOTAS DEL HEADER */
+    .copy-header {
+        width: 33%;
+        padding-left: 0.5rem;
+    }
+
+    /* BARRAS DE NAVEGACIÓN */
+    .main-navbar{
+        margin-top: 2.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* LISTAS DE LA BARRA DE NAVEGACIÓN DEL HEADER */
+    .main-navbar ul {
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* BURGER MENÚ DEL HEADER EN EL MODELO MOBILE */
+    .burger-menu {
+        display: none;
+    }
+
+    /* --------  SECCIÓN MAIN  -------- */
+
+    /* ARTÍCULOS DE CADA SECCIÓN DEL MAIN */
+    .product {
+        width: 48%;
+        transition: box-shadow 450ms;
+    }
+
+    /* CUANDO SE PASA EL MOUSE POR ENCIMA DE LOS ARTÍCULOS DE CADA SECCIÓN DEL MAIN */
+    .product:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    /* LA DESCRIPCIÓN DE CADA PRODUCTO DEL MAIN */
+    /* .product-description {
+        display: block;
+    } */
+
+}
+
+/* PARA NAVEGACIÓN EN DESKTOP */
+@media (min-width: 769px) {
+
+    /* --------  SECCIÓN MAIN  -------- */
+
+    /* ARTÍCULOS DE CADA SECCIÓN DEL MAIN */
+    .product {
+        width: 22%;
+    }
+    
+    /* --------  FOOTER  -------- */
+
+    /* TODOS LOS ARTICLE DEL FOOTER */
+    .main-footer article{
+        width: 33%;
+}
+
 }
