@@ -7,12 +7,11 @@ const app = express();
 /* Importo el módulo nativo path en la variable path */
 const path = require ('path');
 
-/*const port = process.env.port.PORT || 8000;*/
 /* A través de la propiedad static de express establezco los archivos estáticos */
 app.use (express.static('public'));
 
 /* Levanto mi servidor */
-app.listen(8000, () => console.log('Servidor funcionando en 8000'))
+app.listen(process.env.PORT || 3000, () => console.log('Servidor funcionando en 3000'))
 
 /* Indico cuando me mostrará el home de mi página */
 app.get ('/', (req, res) => {
