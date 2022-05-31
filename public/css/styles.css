@@ -201,6 +201,10 @@ main {
 .product-price, .product-discount {
     margin: 0;
 }
+.product-discount{
+    display: flex;
+    justify-content: center;
+}
 
 /* EL PRECIO DE CADA PRODUCTO DEL MAIN */
 .product-price {
