@@ -10,14 +10,14 @@
 :root {
 
   /*Colors*/
-  --main-yellow: #eac923;
-  --main-blue: #03264c;
-  --main-green: #39b54a;
+  --main-yellow: #EAC926;
+  --main-blue: #03264C;
   --main-black: #1c1c1c;
   --main-dark-gray: #666;
   --main-light-blue: #1259c3;
   --main-light-gray: #ebebeb;
   --main-white: #fff;
+  --main-green: #39b54a;
 
   /*Font-Sizes*/
   --main-body-text: 12px;
